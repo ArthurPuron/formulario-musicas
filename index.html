@@ -228,11 +228,28 @@
     </form>
   </div>
 
-  <script>
-    document.getElementById('musicForm').addEventListener('submit', function (event) {
-      event.preventDefault();
+ <script>
+  document.getElementById('musicForm').addEventListener('submit', function (event) {
+    event.preventDefault();
+
+    const formData = new FormData(this);
+    const data = new URLSearchParams(formData);
+
+    fetch('https://script.google.com/macros/s/AKfycbyBFSbLFhgvKD5sV8eZC8mLAOickvM3Zu3pdL2Ewoe-Csxaxosqc7B9B9VXzj23To2Nbw/exec', {
+      method: 'POST',
+      body: data
+    })
+    .then(response => response.json())
+    .then(result => {
       alert('Formulário enviado com sucesso!');
+      document.getElementById('musicForm').reset();
+    })
+    .catch(error => {
+      alert('Erro ao enviar formulário.');
+      console.error(error);
     });
-  </script>
+  });
+</script>
+
 </body>
 </html>
