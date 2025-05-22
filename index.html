@@ -9,8 +9,8 @@
   <style>
     body {
       font-family: 'Playfair Display', serif;
-      background-color: #f0f0f0;
-      color: #333;
+      background-color: #0A2E3F;
+      color: #D4AF37;
       margin: 0;
       padding: 0;
     }
@@ -19,37 +19,41 @@
       width: 90%;
       max-width: 700px;
       margin: 60px auto;
-      background: #fff;
+      background: #0A2E3F;
       padding: 40px;
       border-radius: 12px;
       box-shadow: 0 4px 20px rgba(0,0,0,0.2);
-      color: #333;
-      position:-align: center;
+      color: #D4AF37;
+      position: relative;
+    }
+
+    .logo {
+      text-align: center;
       margin-bottom: 20px;
     }
 
     .logo img {
-      width: 100px;
+      width: 150px;
       border-radius: 8px;
     }
 
     h1 {
       text-align: center;
       margin-bottom: 20px;
-      color: #333;
+      color: #D4AF37;
     }
 
     label {
       font-weight: bold;
       display: block;
       margin-bottom: 6px;
-      color: #333;
+      color: #D4AF37;
     }
 
     .input-icon {
       display: flex;
       align-items: center;
-      background: #f0f0f0;
+      background: #fff;
       border: 1px solid #ccc;
       border-radius: 6px;
       padding: 10px;
@@ -58,7 +62,7 @@
 
     .input-icon i {
       margin-right: 10px;
-      color: #333;
+      color: #0A2E3F;
     }
 
     .input-icon input {
@@ -72,8 +76,8 @@
     button {
       width: 100%;
       padding: 14px;
-      background-color: #4CAF50;
-      color: white;
+      background-color: #D4AF37;
+      color: #0A2E3F;
       border: none;
       border-radius: 6px;
       font-size: 16px;
@@ -83,7 +87,7 @@
     }
 
     button:hover {
-      background-color: #45a049;
+      background-color: #bfa133;
     }
   </style>
 </head>
@@ -111,7 +115,6 @@
       </div>
 
       <!-- Campos de músicas -->
-      <!-- Repita os blocos abaixo para cada momento da cerimônia -->
       <div class="form-group">
         <label>Entrada do Noivo:</label>
         <div class="input-icon">
@@ -124,7 +127,101 @@
         </div>
       </div>
 
-      <!-- Adicione os demais campos conforme necessário -->
+      <div class="form-group">
+        <label>Entrada dos pais e padrinhos:</label>
+        <div class="input-icon">
+          <i class="fa fa-music"></i>
+          <input type="text" name="music2" placeholder="Nome da Música" required />
+        </div>
+        <div class="input-icon">
+          <i class="fa fa-link"></i>
+          <input type="url" name="link2" placeholder="Link da Música" required />
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label>Entrada damas/floristas/plaquinha:</label>
+        <div class="input-icon">
+          <i class="fa fa-music"></i>
+          <input type="text" name="music3" placeholder="Nome da Música" required />
+        </div>
+        <div class="input-icon">
+          <i class="fa fa-link"></i>
+          <input type="url" name="link3" placeholder="Link da Música" required />
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label>Entrada da Noiva:</label>
+        <div class="input-icon">
+          <i class="fa fa-music"></i>
+          <input type="text" name="music4" placeholder="Nome da Música" required />
+        </div>
+        <div class="input-icon">
+          <i class="fa fa-link"></i>
+          <input type="url" name="link4" placeholder="Link da Música" required />
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label>Entrada das alianças:</label>
+        <div class="input-icon">
+          <i class="fa fa-music"></i>
+          <input type="text" name="music5" placeholder="Nome da Música" required />
+        </div>
+        <div class="input-icon">
+          <i class="fa fa-link"></i>
+          <input type="url" name="link5" placeholder="Link da Música" required />
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label>Benção das alianças/votos:</label>
+        <div class="input-icon">
+          <i class="fa fa-music"></i>
+          <input type="text" name="music6" placeholder="Nome da Música" required />
+        </div>
+        <div class="input-icon">
+          <i class="fa fa-link"></i>
+          <input type="url" name="link6" placeholder="Link da Música" required />
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label>Assinaturas:</label>
+        <div class="input-icon">
+          <i class="fa fa-music"></i>
+          <input type="text" name="music7" placeholder="Nome da Música" required />
+        </div>
+        <div class="input-icon">
+          <i class="fa fa-link"></i>
+          <input type="url" name="link7" placeholder="Link da Música" required />
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label>Cumprimento e saída dos pais, padrinhos e pajens:</label>
+        <div class="input-icon">
+          <i class="fa fa-music"></i>
+          <input type="text" name="music8" placeholder="Nome da Música" required />
+        </div>
+        <div class="input-icon">
+          <i class="fa fa-link"></i>
+          <input type="url" name="link8" placeholder="Link da Música" required />
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label>Saída dos noivos:</label>
+        <div class="input-icon">
+          <i class="fa fa-music"></i>
+          <input type="text" name="music9" placeholder="Nome da Música" required />
+        </div>
+        <div class="input-icon">
+          <i class="fa fa-link"></i>
+          <input type="url" name="link9" placeholder="Link da Música" required />
+        </div>
+      </div>
 
       <button type="submit">Enviar Seleção</button>
     </form>
@@ -138,3 +235,4 @@
   </script>
 </body>
 </html>
+
