@@ -1,0 +1,158 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seleção de Músicas para Casamento</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+        }
+        header {
+            background: #333;
+            color: #fff;
+            padding-top: 30px;
+            min-height: 70px;
+            border-bottom: #0779e4 3px solid;
+        }
+        header a {
+            color: #fff;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 16px;
+        }
+        header ul {
+            padding: 0;
+            list-style: none;
+        }
+        header li {
+            float: left;
+            display: inline;
+            padding: 0 20px 0 20px;
+        }
+        header #branding {
+            float: left;
+        }
+        header #branding h1 {
+            margin: 0;
+        }
+        header nav {
+            float: right;
+            margin-top: 10px;
+        }
+        .form-section {
+            background: #fff;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .form-section h2 {
+            margin-top: 0;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        .form-group input[type="text"],
+        .form-group input[type="date"],
+        .form-group input[type="url"] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .form-group button {
+            display: inline-block;
+            background: #333;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .form-group button:hover {
+            background: #0779e4;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div id="branding">
+                <h1>Seleção de Músicas para Casamento</h1>
+            </div>
+        </div>
+    </header>
+    <div class="container">
+        <form id="musicForm">
+            <div class="form-section">
+                <h2>Informações do Cliente</h2>
+                <div class="form-group">
+                    <label for="clientName">Nome do Cliente</label>
+                    <input type="text" id="clientName" name="clientName" required>
+                </div>
+                <div class="form-group">
+                    <label for="eventDate">Data do Evento</label>
+                    <input type="date" id="eventDate" name="eventDate" required>
+                </div>
+            </div>
+            <div class="form-section">
+                <h2>Seleção de Músicas</h2>
+                <div class="form-group">
+                    <label for="brideEntry">Entrada da Noiva</label>
+                    <input type="text" id="brideEntry" name="brideEntry" placeholder="Nome da Música">
+                    <input type="url" id="brideEntryLink" name="brideEntryLink" placeholder="Link da Música">
+                </div>
+                <div class="form-group">
+                    <label for="groomsmenEntry">Entrada dos Padrinhos</label>
+                    <input type="text" id="groomsmenEntry" name="groomsmenEntry" placeholder="Nome da Música">
+                    <input type="url" id="groomsmenEntryLink" name="groomsmenEntryLink" placeholder="Link da Música">
+                </div>
+                <div class="form-group">
+                    <label for="signature">Assinatura</label>
+                    <input type="text" id="signature" name="signature" placeholder="Nome da Música">
+                    <input type="url" id="signatureLink" name="signatureLink" placeholder="Link da Música">
+                </div>
+                <div class="form-group">
+                    <label for="brideGroomExit">Saída dos Noivos</label>
+                    <input type="text" id="brideGroomExit" name="brideGroomExit" placeholder="Nome da Música">
+                    <input type="url" id="brideGroomExitLink" name="brideGroomExitLink" placeholder="Link da Música">
+                </div>
+                <div class="form-group">
+                    <label for="firstDance">Primeira Dança</label>
+                    <input type="text" id="firstDance" name="firstDance" placeholder="Nome da Música">
+                    <input type="url" id="firstDanceLink" name="firstDanceLink" placeholder="Link da Música">
+                </div>
+                <div class="form-group">
+                    <label for="party">Festa</label>
+                    <input type="text" id="party" name="party" placeholder="Nome da Música">
+                    <input type="url" id="partyLink" name="partyLink" placeholder="Link da Música">
+                </div>
+            </div>
+            <div class="form-group">
+                <button type="submit">Enviar Seleção</button>
+            </div>
+        </form>
+    </div>
+    <script>
+        document.getElementById('musicForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            // Aqui você pode adicionar a lógica para enviar os dados para o Google Sheets
+            alert('Formulário enviado com sucesso!');
+        });
+    </script>
+</body>
+</html>
