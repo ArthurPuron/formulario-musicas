@@ -1,3 +1,5 @@
+# Generate the complete HTML code with all fields and integration with Google Apps Script
+html_code = """
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -25,7 +27,10 @@
       box-shadow: 0 4px 20px rgba(0,0,0,0.2);
       color: #fff;
       position: relative;
-         text-align: center;
+    }
+
+    .logo {
+      text-align: center;
       margin-bottom: 20px;
     }
 
@@ -113,8 +118,6 @@
       </div>
 
       <!-- Campos de músicas -->
-      <!-- Repita para cada momento -->
-      <!-- Exemplo para music1 e link1 -->
       <div class="form-group">
         <label>Entrada do Noivo:</label>
         <div class="input-icon">
@@ -127,8 +130,89 @@
         </div>
       </div>
 
-      <!-- Repita para music2 a music9 e link2 a link9 -->
-      <!-- ... (os outros campos seguem o mesmo padrão) -->
+      <div class="form-group">
+        <label>Entrada dos pais e padrinhos:</label>
+        <div class="input-icon">
+          <i class="fa fa-music"></i>
+          <input type="text" name="music2" placeholder="Nome da Música" required />
+        </div>
+        <div class="input-icon">
+          <i class="fa fa-link"></i>
+          <input type="url" name="link2" placeholder="Link da Música" required />
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label>Entrada damas/floristas/plaquinha:</label>
+        <div class="input-icon">
+          <i class="fa fa-music"></i>
+          <input type="text" name="music3" placeholder="Nome da Música" required />
+        </div>
+        <div class="input-icon">
+          <i class="fa fa-link"></i>
+          <input type="url" name="link3" placeholder="Link da Música" required />
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label>Entrada da Noiva:</label>
+        <div class="input-icon">
+          <i class="fa fa-music"></i>
+          <input type="text" name="music4" placeholder="Nome da Música" required />
+        </div>
+        <div class="input-icon">
+          <i class="fa fa-link"></i>
+          <input type="url" name="link4" placeholder="Link da Música" required />
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label>Entrada das alianças:</label>
+        <div class="input-icon">
+          <i class="fa fa-music"></i>
+          <input type="text" name="music5" placeholder="Nome da Música" required />
+        </div>
+        <div class="input-icon">
+          <i class="fa fa-link"></i>
+          <input type="url" name="link5" placeholder="Link da Música" required />
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label>Benção das alianças/votos:</label>
+        <div class="input-icon">
+          <i class="fa fa-music"></i>
+          <input type="text" name="music6" placeholder="Nome da Música" required />
+        </div>
+        <div class="input-icon">
+          <i class "fa fa-link"></i>
+          <input type="url" name="link6" placeholder="Link da Música" required />
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label>Assinaturas:</label>
+        <div class="input-icon">
+          <i class="fa fa-music"></i>
+          <input type="text" name="music7" placeholder="Nome da Música" required />
+        </div>
+        <div class="input-icon">
+          <i class="fa fa-link"></i>
+          <input type="url" name="link7" placeholder="Link da Música" required />
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label>Cumprimento e saída dos pais, padrinhos e pajens:</label>
+        <div class="input-icon">
+          <i class="fa fa-music"></i>
+          <input type="text" name="music8" placeholder="Nome da Música" required />
+        </div>
+        <div class="input-icon">
+          <i class="fa fa-link"></i>
+          <input type="url" name="link8" placeholder="Link da Música" required />
+        </div>
+      </div>
 
       <div class="form-group">
         <label>Saída dos noivos:</label>
@@ -178,3 +262,11 @@
   </script>
 </body>
 </html>
+"""
+
+# Save the HTML code to a file
+with open("formulario_musicas.html", "w") as file:
+    file.write(html_code)
+
+print("O código HTML completo foi gerado e salvo no arquivo 'formulario_musicas.html'.")
+
