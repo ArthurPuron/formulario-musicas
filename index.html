@@ -1,23 +1,237 @@
+# HTML code for the complete and revised form
+html_code = """
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-  <meta charset="UTF-8">
-  <title>Teste de Envio</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Seleção de Músicas para Casamento</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    body {
+      font-family: 'Playfair Display', serif;
+      background-color: #0A2E3F;
+      color: #fff;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 700px;
+      margin: 60px auto;
+      background: #0A2E3F;
+      padding: 40px;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+      color: #fff;
+      position: relative;
+    }
+
+    .logo {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .logo img {
+      width: 150px;
+      border-radius: 8px;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #fff;
+    }
+
+    label {
+      font-weight: bold;
+      display: block;
+      margin-bottom: 6px;
+      color: #fff;
+    }
+
+    .input-icon {
+      display: flex;
+      align-items: center;
+      background: #fff;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      padding: 10px;
+      margin-bottom: 10px;
+    }
+
+    .input-icon i {
+      margin-right: 10px;
+      color: #0A2E3F;
+    }
+
+    .input-icon input {
+      border: none;
+      outline: none;
+      width: 100%;
+      font-size: 16px;
+      background: transparent;
+      color: #0A2E3F;
+    }
+
+    button {
+      width: 100%;
+      padding: 14px;
+      background-color: #fff;
+      color: #0A2E3F;
+      border: none;
+      border-radius: 6px;
+      font-size: 16px;
+      cursor: pointer;
+      margin-top: 20px;
+      font-weight: bold;
+    }
+
+    button:hover {
+      background-color: #f2f2f2;
+    }
+  </style>
 </head>
 <body>
-  <h2>Formulário de Teste</h2>
-  <form id="testForm">
-    <label for="clientName">Nome do Cliente:</label>
-    <input type="text" name="clientName" required><br><br>
+  <div class="container">
+    <div class="logo">
+      <img src="logo.png" alt="Logo da Empresa">
+    </div>
+    <h1>Seleção de Músicas para Casamento</h1>
+    <form id="musicForm">
+      <div class="form-group">
+        <label for="clientName">Nome do Cliente:</label>
+        <div class="input-icon">
+          <i class="fa fa-user"></i>
+          <input type="text" id="clientName" name="clientName" required />
+        </div>
+      </div>
 
-    <label for="eventDate">Data do Evento:</label>
-    <input type="date" name="eventDate" required><br><br>
+      <div class="form-group">
+        <label for="eventDate">Data do Evento:</label>
+        <div class="input-icon">
+          <i class="fa fa-calendar-alt"></i>
+          <input type="date" id="eventDate" name="eventDate" required />
+        </div>
+      </div>
 
-    <button type="submit">Enviar</button>
-  </form>
+      <!-- Campos de músicas -->
+      <div class="form-group">
+        <label>Entrada do Noivo:</label>
+        <div class="input-icon">
+          <i class="fa fa-music"></i>
+          <input type="text" name="music1" placeholder="Nome da Música" required />
+        </div>
+        <div class="input-icon">
+          <i class="fa fa-link"></i>
+          <input type="url" name="link1" placeholder="Link da Música" required />
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label>Entrada dos pais e padrinhos:</label>
+        <div class="input-icon">
+          <i class="fa fa-music"></i>
+          <input type="text" name="music2" placeholder="Nome da Música" required />
+        </div>
+        <div class="input-icon">
+          <i class="fa fa-link"></i>
+          <input type="url" name="link2" placeholder="Link da Música" required />
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label>Entrada damas/floristas/plaquinha:</label>
+        <div class="input-icon">
+          <i class="fa fa-music"></i>
+          <input type="text" name="music3" placeholder="Nome da Música" required />
+        </div>
+        <div class="input-icon">
+          <i class="fa fa-link"></i>
+          <input type="url" name="link3" placeholder="Link da Música" required />
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label>Entrada da Noiva:</label>
+        <div class="input-icon">
+          <i class="fa fa-music"></i>
+          <input type="text" name="music4" placeholder="Nome da Música" required />
+        </div>
+        <div class="input-icon">
+          <i class="fa fa-link"></i>
+          <input type="url" name="link4" placeholder="Link da Música" required />
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label>Entrada das alianças:</label>
+        <div class="input-icon">
+          <i class="fa fa-music"></i>
+          <input type="text" name="music5" placeholder="Nome da Música" required />
+        </div>
+        <div class="input-icon">
+          <i class="fa fa-link"></i>
+          <input type="url" name="link5" placeholder="Link da Música" required />
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label>Benção das alianças/votos:</label>
+        <div class="input-icon">
+          <i class="fa fa-music"></i>
+          <input type="text" name="music6" placeholder="Nome da Música" required />
+        </div>
+        <div class="input-icon">
+          <i class="fa fa-link"></i>
+          <input type="url" name="link6" placeholder="Link da Música" required />
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label>Assinaturas:</label>
+        <div class="input-icon">
+          <i class="fa fa-music"></i>
+          <input type="text" name="music7" placeholder="Nome da Música" required />
+        </div>
+        <div class="input-icon">
+          <i class="fa fa-link"></i>
+          <input type="url" name="link7" placeholder="Link da Música" required />
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label>Cumprimento e saída dos pais, padrinhos e pajens:</label>
+        <div class="input-icon">
+          <i class="fa fa-music"></i>
+          <input type="text" name="music8" placeholder="Nome da Música" required />
+        </div>
+        <div class="input-icon">
+          <i class="fa fa-link"></i>
+          <input type="url" name="link8" placeholder="Link da Música" required />
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label>Saída dos noivos:</label>
+        <div class="input-icon">
+          <i class="fa fa-music"></i>
+          <input type="text" name="music9" placeholder="Nome da Música" required />
+        </div>
+        <div class="input-icon">
+          <i class="fa fa-link"></i>
+          <input type="url" name="link9" placeholder="Link da Música" required />
+        </div>
+      </div>
+
+      <button type="submit">Enviar Seleção</button>
+    </form>
+  </div>
 
   <script>
-    document.getElementById('testForm').addEventListener('submit', function (event) {
+    document.getElementById('musicForm').addEventListener('submit', function (event) {
       event.preventDefault();
 
       const formData = new FormData(this);
@@ -29,13 +243,22 @@
       })
       .then(response => response.json())
       .then(result => {
-        alert('Formulário de teste enviado com sucesso!');
+        alert('Formulário enviado com sucesso!');
+        document.getElementById('musicForm').reset();
       })
       .catch(error => {
-        alert('Erro ao enviar formulário de teste.');
+        alert('Erro ao enviar formulário.');
         console.error(error);
       });
     });
   </script>
 </body>
 </html>
+"""
+
+# Save the HTML code to a file
+with open("formulario_musicas.html", "w") as file:
+    file.write(html_code)
+
+print("Arquivo HTML gerado com sucesso: formulario_musicas.html")
+
