@@ -9,8 +9,7 @@
   <style>
     body {
       font-family: 'Playfair Display', serif;
-      background-color: #061e2c;
-      background-image: url('https://www.transparenttextures.com/patterns/white-wall-3.png');
+      background-color: #8B5E3C;
       color: #fff;
       margin: 0;
       padding: 0;
@@ -229,4 +228,10 @@
   </div>
 
   <script>
-    document.getElementById('musicForm').addEventListener('
+    document.getElementById('musicForm').addEventListener('submit', function (event) {
+      event.preventDefault();
+      alert('Formulário enviado com sucesso!');
+    });
+  </script>
+</body>
+</html>
